@@ -29,5 +29,11 @@ public class Employee extends Person{
         employee.work();
         employee.changeName("Jack Clark");
         System.out.println(employee);
+        Person person = new Person("h", "male") {
+            public void work() {
+                System.out.println("nono");
+            }
+        };
+        person.work();
     }
 }
