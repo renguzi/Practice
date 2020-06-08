@@ -19,6 +19,7 @@ public class StringPool {
 
         System.out.println(s6 == s7);
         System.out.println(s8 == s6);
+        System.out.println(s8 == s7);
 
         System.out.println("s1 == s2 ?" + (s1 == s2));
         System.out.println("s1 == s3 ?" + (s1 == s3));
