@@ -38,6 +38,12 @@ public class JavaObjectSorting {
                 stringList) {
             System.out.println(s);
         }
+        Employee[] employees = new Employee[4];
+        employees[0] = new Employee(10, "Mikery", 25, 10000);
+        employees[1] = new Employee(20, "Arun", 28, 25000);
+        employees[2] = new Employee(5, "Lisa", 22, 5000);
+        employees[3] = new Employee(1, "Pankaj", 32, 50000);
+        Arrays.sort(employees);
+        System.out.println(Arrays.toString(employees));
     }
-
 }
