@@ -20,6 +20,5 @@ public class StringToCharJava {
         System.out.println(c);
         System.out.println(Arrays.toString(chars1));
         System.out.println(chars1.length);
-
     }
 }
