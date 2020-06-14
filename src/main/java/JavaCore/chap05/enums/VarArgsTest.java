@@ -13,6 +13,7 @@ public class VarArgsTest {
 
         double max = maxDouble(1.3, 2.4, -1.5, 100.2, 13.15);
         System.out.println(max);
+
     }
 
     public static double maxDouble(double... doubles) {
