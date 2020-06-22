@@ -11,6 +11,7 @@ public class Employee implements Comparable<Employee>{
     private String name;
     private int age;
     private long salary;
+    private Double d1;
 
     public int getId() {
         return id;
@@ -62,13 +63,15 @@ public class Employee implements Comparable<Employee>{
     }
 
     public int compareTo(Employee o) {
-        if (this.name.compareToIgnoreCase(o.name) < 0) {
-            return -1;
-        }
-        if (this.name.compareToIgnoreCase(o.name) > 0) {
-            return 1;
-        }
-        return 0;
+//        if (this.name.compareToIgnoreCase(o.name) < 0) {
+//            return -1;
+//        }
+//        if (this.name.compareToIgnoreCase(o.name) > 0) {
+//            return 1;
+//        }
+//        return 0;
+        return this.name.compareToIgnoreCase(o.name);
+//        return this.name - o.name;
     }
 //
 //    public int compareTo(Employee o) {
