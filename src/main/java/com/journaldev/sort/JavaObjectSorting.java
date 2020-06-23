@@ -12,7 +12,7 @@ import java.util.List;
  * @Version:1.0
  */
 public class JavaObjectSorting {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         int[] intArr = {5, 9, 1, 10};
         Arrays.sort(intArr);
         System.out.println(Arrays.toString(intArr));
@@ -64,5 +64,14 @@ public class JavaObjectSorting {
         System.out.println(cl);
         System.out.println(cl.getName());
         System.out.println(c2.getName());
+        System.out.println(Employee[].class);
+        System.out.println(JavaObjectSorting.class);
+        System.out.println(Class.forName("com.journaldev.sort.JavaObjectSorting"));
+        System.out.println(boolean.class);
+        System.out.println(void.class);
+        System.out.println(String.class);
+        System.out.println(Class.forName("java.lang.String"));
+        System.out.println("xx".getClass().getCanonicalName());
+        System.out.println(int.class.getClass());
     }
 }
