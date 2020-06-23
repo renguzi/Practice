@@ -45,5 +45,24 @@ public class JavaObjectSorting {
         employees[3] = new Employee(1, "Pankaj", 32, 50000);
         Arrays.sort(employees);
         System.out.println(Arrays.toString(employees));
+
+        System.out.println("order by name length.");
+        Arrays.sort(employees, Employee.NameComparator);
+        System.out.println(Arrays.toString(employees));
+
+        System.out.println("order by salary.");
+        Arrays.sort(employees, Employee.SalaryComparator);
+        System.out.println(Arrays.toString(employees));
+
+        System.out.println("order by name length and salary.");
+        Arrays.sort(employees, Employee.NameAndSalaryComparator);
+        System.out.println(Arrays.toString(employees));
+        System.out.println(employees.getClass().getName());
+        System.out.println(employees[0].getClass().getName());
+        Class cl = employees.getClass();
+        Class c2 = employees[1].getClass();
+        System.out.println(cl);
+        System.out.println(cl.getName());
+        System.out.println(c2.getName());
     }
 }

@@ -1,5 +1,7 @@
 package com.journaldev.sort;
 
+import java.util.Comparator;
+
 /**
  * @Author:asher
  * @Date:2020/6/8 17:05
@@ -11,7 +13,6 @@ public class Employee implements Comparable<Employee>{
     private String name;
     private int age;
     private long salary;
-    private Double d1;
 
     public int getId() {
         return id;
@@ -73,7 +74,8 @@ public class Employee implements Comparable<Employee>{
         return this.name.compareToIgnoreCase(o.name);
 //        return this.name - o.name;
     }
-//
+
+    //
 //    public int compareTo(Employee o) {
 //        if (this.id < o.id) {
 //            return -1;
@@ -83,4 +85,28 @@ public class Employee implements Comparable<Employee>{
 //        }
 //        return 0;
 //    }
+    public static Comparator<Employee> NameComparator = new Comparator<Employee>() {
+        @Override
+        public int compare(Employee o1, Employee o2) {
+            return o1.getName().length() - o2.getName().length();
+        }
+    };
+
+    public static Comparator<Employee> SalaryComparator=new Comparator<Employee>() {
+        @Override
+        public int compare(Employee o1, Employee o2) {
+            return (int) (o1.getSalary()-o2.getSalary());
+        }
+    };
+
+   public static Comparator<Employee> NameAndSalaryComparator=new Comparator<Employee>() {
+       @Override
+       public int compare(Employee o1, Employee o2) {
+           int flag = o1.getName().length() - o2.getName().length();
+           if (flag == 0) {
+               return (int) (o2.getSalary() - o2.getSalary());
+           }
+           return flag;
+       }
+   };
 }
