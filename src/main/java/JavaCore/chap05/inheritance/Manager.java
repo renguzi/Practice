@@ -7,7 +7,8 @@ package JavaCore.chap05.inheritance;
  * @Version:1.0
  */
 public class Manager extends Employee{
-    private double bonus;
+    public double bonus;
+    public String xx;
     public Manager(String name, double salary, int year, int month, int day) {
         super(name, salary, year, month, day);
         bonus=0;
