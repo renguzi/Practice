@@ -22,7 +22,8 @@ public class TalkingClock {
     }
 
     public void start() {
-        TimePrinter listener = new TimePrinter();
+//        TimePrinter listener = new TimePrinter();
+        ActionListener listener = this.new TimePrinter();
         Timer timer = new Timer(interval, listener);
         timer.start();
     }
