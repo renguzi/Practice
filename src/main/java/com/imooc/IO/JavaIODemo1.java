@@ -27,5 +27,10 @@ public class JavaIODemo1 {
                 exception.printStackTrace();
             }
         }
+        File file3 = new File("/Users/asher/imooc/dir/dir1");
+        if (!file3.exists()) {
+            file3.mkdirs();
+        }
+        System.out.println(file3.exists());
     }
 }
