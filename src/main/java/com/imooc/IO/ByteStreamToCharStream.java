@@ -21,9 +21,9 @@ public class ByteStreamToCharStream {
             inputStreamReader = new InputStreamReader(fileInputStream);
             fileOutputStream = new FileOutputStream("/Users/asher/imooc/byte_to_char.txt");
             outputStreamWriter = new OutputStreamWriter(fileOutputStream);
-            while ((n = inputStreamReader.read()) != -1) {
-                System.out.println((char) n);
-            }
+//            while ((n = inputStreamReader.read()) != -1) {
+//                System.out.println((char) n);
+//            }
                     System.out.println("hhhhhhhhhhh");
             while ((n = inputStreamReader.read(chars)) != -1) {
                 System.out.print(new String(chars, 0, n));
@@ -33,6 +33,8 @@ public class ByteStreamToCharStream {
             fileInputStream.close();
             outputStreamWriter.close();
             fileOutputStream.close();
+            System.out.println(fileInputStream.getFD());
+            System.out.println(File.separator);
         } catch (FileNotFoundException exception) {
             exception.printStackTrace();
         } catch (IOException e) {
