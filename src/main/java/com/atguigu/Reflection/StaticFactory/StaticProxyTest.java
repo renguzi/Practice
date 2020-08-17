@@ -9,7 +9,9 @@ package com.atguigu.Reflection.StaticFactory;
 public class StaticProxyTest {
     public static void main(String[] args) {
         //1先创建1个被代理类的对象；
+        //这里，也可以用一个
         ClothFactory nike = new NikeClothFactory();
+
         //2根据被代理类对象来创建1个代理类的对象；
         ClothFactory proxyClothFactory = new ProxyClothFactory(nike);
         //3调用被代理类的方法；
