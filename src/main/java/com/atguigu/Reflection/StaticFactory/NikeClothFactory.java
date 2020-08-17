@@ -6,6 +6,7 @@ package com.atguigu.Reflection.StaticFactory;
  * @Description:com.atguigu.Reflection.StaticFactory
  * @Version:1.0
  */
+//被代理类
 public class NikeClothFactory implements ClothFactory{
     @Override
     public void productCloth() {
