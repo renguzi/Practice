@@ -19,6 +19,8 @@ public class ArrayToList {
 //        vowelsList.add("h");
 //        vowelsList.remove("a");
         System.out.println(vowelsList.contains("i"));
+        vowels[2] = "hello";
+        System.out.println(vowelsList.contains("i"));
         for (String s:vowelsList ) {
             System.out.println(s);
         }
