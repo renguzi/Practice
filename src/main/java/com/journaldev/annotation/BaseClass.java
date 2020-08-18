@@ -7,7 +7,7 @@ package com.journaldev.annotation;
  * @Version:1.0
  */
 public class BaseClass {
-    public void doSomething(Object string) {
+    public void doSomething(String string) {
         System.out.println("Base impl:" + string);
     }
 }
