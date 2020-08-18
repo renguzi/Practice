@@ -15,6 +15,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Deque;
 
 /**
  * 1 如何根据加载到内存中的被代理类，去动态创建一个代理类及其对象？
