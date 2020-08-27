@@ -15,7 +15,7 @@ public class ProxyClothFactory implements ClothFactory {
         this.factory = factory;
     }
     @Override
-    //将来调用被代理类的该方法时，实际上是调用了被代理类的该方法，因为factory实际上就是一个被代理类的对象
+    //将来调用代理类的该方法时，实际上是调用了被代理类的该方法，因为factory实际上就是一个被代理类的对象
     public void productCloth() {
         System.out.println("代理类做一些准备工作");
         factory.productCloth();

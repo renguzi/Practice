@@ -45,6 +45,8 @@ class MyInvocaktionHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Object retrunValue = method.invoke(obj, args);
+        System.out.println(proxy.getClass().getName());
+        System.out.println(proxy.getClass().getName().toString());
         return retrunValue;
     }
 }
@@ -54,7 +56,7 @@ public class ProxyTest {
 //        String s = superMan.getBelief();
 //        System.out.println(s);
 //        superMan.eat("火锅");
-        //根据被代理类的对象，创建1个被代理类的对象
+        //根据被代理类的对象，创建1个代理类的对象
         Human proxyInstance = (Human) ProxyFactory.getProxyInstance(superMan);
         System.out.println(Proxy.isProxyClass(proxyInstance.getClass()));
         System.out.println(Proxy.isProxyClass(superMan.getClass()));
@@ -62,8 +64,8 @@ public class ProxyTest {
         String s = proxyInstance.getBelief();
         System.out.println(s);
         proxyInstance.eat("火锅");
-        NikeClothFactory nikeClothFactory = new NikeClothFactory();
-        ClothFactory clothFactory = (ClothFactory) ProxyFactory.getProxyInstance(nikeClothFactory);
-        clothFactory.productCloth();
+//        NikeClothFactory nikeClothFactory = new NikeClothFactory();
+//        ClothFactory clothFactory = (ClothFactory) ProxyFactory.getProxyInstance(nikeClothFactory);
+//        clothFactory.productCloth();
     }
 }

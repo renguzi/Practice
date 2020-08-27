@@ -16,6 +16,7 @@ public class ArrayToList {
         List<String> vowelsList = Arrays.asList(vowels);
 //        java.lang.UnsupportedOperationException
 //        为什么用Arrays工具类的asList()方法，生成的List，不能对其进行结构性修改呢？
+//        但是，可以通过修改数组来变向修改尤其生成的List呢？
 //        vowelsList.add("h");
 //        vowelsList.remove("a");
         System.out.println(vowelsList.contains("i"));
