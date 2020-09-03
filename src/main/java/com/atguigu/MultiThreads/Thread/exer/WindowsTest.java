@@ -1,0 +1,33 @@
+package com.atguigu.MultiThreads.Thread.exer;
+
+/**
+ * @Author:asher
+ * @Date:2020/9/3 15:39
+ * @Description:com.atguigu.MultiThreads.Thread.exer
+ * @Version:1.0
+ * 创建3个线程并发去卖票，一共有100张票。
+ */
+class Window extends Thread {
+    private static int ticket=100;
+
+    @Override
+    public void run() {
+        while (ticket > 0) {
+            System.out.println(getName() + "在卖票，票号为：" + ticket);
+            ticket--;
+        }
+    }
+}
+public class WindowsTest {
+    public static void main(String[] args) {
+        Window w1 = new Window();
+        Window w2 = new Window();
+        Window w3 = new Window();
+        w1.setName("第一个窗口");
+        w2.setName("第二个窗口");
+        w3.setName("第三个窗口");
+        w1.start();
+        w2.start();
+        w3.start();
+    }
+}
