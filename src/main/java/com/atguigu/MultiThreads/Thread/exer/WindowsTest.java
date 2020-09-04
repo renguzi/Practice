@@ -5,7 +5,7 @@ package com.atguigu.MultiThreads.Thread.exer;
  * @Date:2020/9/3 15:39
  * @Description:com.atguigu.MultiThreads.Thread.exer
  * @Version:1.0
- * 创建3个线程并发去卖票，一共有100张票。
+ * 创建3个线程并发去卖票，一共有100张票。使用继承Thread类的方式来做。
  */
 class Window extends Thread {
     private static int ticket=100;
