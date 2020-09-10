@@ -6,7 +6,7 @@ package cn.how2j.JavaBasic.Array;
  * @Description:cn.how2j.JavaBasic.Array
  * @Version:1.0
  */
-public class BubbleSort {
+public class BubbleSortTest {
     public static void main(String[] args) {
         int[] array = new int[5];
         for (int i = 0; i < array.length; i++) {
