@@ -24,6 +24,5 @@ public class PriorityQueueTest {
         while (!priorityQueue.isEmpty()) {
             System.out.println(priorityQueue.remove());
         }
-
     }
 }
