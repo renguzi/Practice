@@ -9,13 +9,21 @@ package com.atguigu.MultiThreads.Thread.exer;
  */
 class Rwindow implements Runnable {
     private int ticket=100;
+    private Object object = new Object();
     @Override
-    public void run() {
-        while (ticket > 100) {
-            System.out.println(Thread.currentThread().getName() + " 卖票：票号为，" + ticket);
-            ticket--;
+    public synchronized void  run() {
+//        synchronized (object) {
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+            while (ticket > 0) {
+                System.out.println(Thread.currentThread().getName() + " 卖票：票号为，" + ticket);
+                ticket--;
+            }
         }
-    }
+//    }
 }
 public class WindowRunnable {
     public static void main(String[] args) {
@@ -23,8 +31,11 @@ public class WindowRunnable {
         Thread t1 = new Thread(rwindow);
         Thread t2 = new Thread(rwindow);
         Thread t3 = new Thread(rwindow);
-        t1.start();
         t2.start();
+        t1.start();
         t3.start();
+        System.out.println(t2.isAlive());
+        System.out.println(t1.isAlive());
+        System.out.println(t3.isAlive());
     }
 }
