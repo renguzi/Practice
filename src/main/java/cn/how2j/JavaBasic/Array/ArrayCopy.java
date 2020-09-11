@@ -1,6 +1,5 @@
 package cn.how2j.JavaBasic.Array;
 
-import java.util.Map;
 
 /**
  * @Author:asher
