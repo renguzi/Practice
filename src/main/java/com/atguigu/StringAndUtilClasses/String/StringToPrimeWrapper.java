@@ -29,7 +29,8 @@ public class StringToPrimeWrapper {
         char[] charArray = (s2.toUpperCase()+"123").toCharArray() ;
         for (int j = 0; j < charArray.length; j++) {
             System.out.println(charArray[j]);
-
         }
+        String s3 = new String(charArray);
+        System.out.println(s3);
     }
 }
