@@ -25,6 +25,15 @@ public class ListSortExample {
             return o2 - o1;}));
         System.out.println("Reverse sorting:");
         System.out.println(list);
+        list.sort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1-o2;
+            }
+        });
+
+        System.out.println("---------------------");
+        System.out.println(list);
 
     }
 }
