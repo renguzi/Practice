@@ -25,6 +25,7 @@ public class ListSortExample {
             return o2 - o1;}));
         System.out.println("Reverse sorting:");
         System.out.println(list);
+        //调用List接口中的sort()排序方法，用自定义的comparator排序，并且用的是匿名内部类的方法来完成的。
         list.sort(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
