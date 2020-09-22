@@ -33,9 +33,14 @@ public class ListIteratorExample {
         while (iterator.hasNext()) {
             int i = iterator.next();
             if (i == 1) {
-                list.add(101);
+//                list.add(101);
+//                list.remove(1);
+
+                iterator.remove();
             }
         }
+
+        System.out.println(list);
     }
 
 }
