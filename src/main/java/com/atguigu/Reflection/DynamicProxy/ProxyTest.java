@@ -42,6 +42,10 @@ class MyInvocaktionHandler implements InvocationHandler {
     public MyInvocaktionHandler(Object obj) {
         this.obj = obj;
     }
+
+    //当我们通过代理类的对象调用方法a时，就会自动的通过被代理类调用下面的invoke()方法.
+//所以，我们把代理类执行的方法a的的功能声明在invoke()方法中，这样就实现了我们的目的：
+//    即，通过代理类调用方法a时，其实是被代理类在执行方法a的功能。
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Object retrunValue = method.invoke(obj, args);
