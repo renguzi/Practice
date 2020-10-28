@@ -1,7 +1,5 @@
 package cn.how2j.JavaBasic.InterfaceAndInheritance;
 
-import cn.how2j.JavaBasic.ClassAndObjects.Hero;
-
 /**
  * @Author:asher
  * @Date:2020/9/11 17:54
@@ -20,8 +18,19 @@ public class ADHero extends Hero implements AD {
         System.out.println("ad hero battle win");
     }
 
+    public ADHero() {
+        System.out.println("AD Hero的构造方法");
+    }
+
+    public ADHero(String name) {
+        super(name);
+        System.out.println("AD Here的有参构造方法");
+    }
+
     public static void main(String[] args) {
-        cn.how2j.JavaBasic.InterfaceAndInheritance.Hero.battleWin();
-        ADHero.battleWin();
+//        cn.how2j.JavaBasic.InterfaceAndInheritance.Hero.battleWin();
+//        ADHero.battleWin();
+//
+        ADHero adHero = new ADHero("delaiwen");
     }
 }
