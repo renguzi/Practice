@@ -25,7 +25,7 @@ public class ArrayStack {
             return false;
         } else {
             items[count] = x;
-            count++;
+            ++count;
             return true;
         }
     }
@@ -35,9 +35,10 @@ public class ArrayStack {
         if (count == 0) {
             return null;
         } else {
-            String temp = items[count-1];
-            count--;
-            return temp;
+//            String temp = items[count-1];
+            return items[--count];
+//            --count;
+//            return temp;
         }
     }
 
