@@ -52,7 +52,7 @@ public class DAO<T> {
 
 //        下面是错误的写法
 //        Collection<T> values = map.values();
-//        System.out.println(values.getClass().getName());
+//        System.out.println(values.lass().getName());
 //        System.out.println(values.getClass());
 //        return (List<T>) values;
     }
