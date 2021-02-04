@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public class Statistics {
     public static void main(String[] args) {
-        Random random = new Random(47);
+        Random random = new Random(4756);
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < 10000; i++) {
             int r = random.nextInt(20);
