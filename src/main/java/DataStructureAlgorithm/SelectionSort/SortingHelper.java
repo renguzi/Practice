@@ -1,5 +1,7 @@
 package DataStructureAlgorithm.SelectionSort;
 
+import DataStructureAlgorithm.InsertionSort.InsertionSort;
+
 /**
  * @Author:asher
  * @Date:2021/2/19 10:34
@@ -23,6 +25,12 @@ public class SortingHelper {
         long beginTime = System.currentTimeMillis();
         if (sortName.equals("SelectionSort")) {
             SelectionSort.sort(arr);
+        }
+        if (sortName.equals("InsertionSort")) {
+            InsertionSort.sort(arr);
+        }
+        if (sortName.equals("InsertionSort2")) {
+            InsertionSort.sort2(arr);
         }
         long endTime = System.currentTimeMillis();
         double time = (endTime - beginTime) / 1000.0;
