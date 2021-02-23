@@ -51,12 +51,12 @@ public class LinearSearch {
 
     @Test
     public void test() {
-        int[] dataSize = {100000, 10000000};
+        int[] dataSize = {100000, 1000000};
         for (int n:dataSize ) {
             long startTime = System.currentTimeMillis();
-            for (int i = 0; i < 100; i++) {
+//            for (int i = 0; i < 100; i++) {
                 LinearSearch.getEle(ArrayGenerator.generator(n),n);
-            }
+//            }
             long endTime = System.currentTimeMillis();
             System.out.println(endTime - startTime);
         }
