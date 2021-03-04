@@ -10,11 +10,9 @@ import DataStructureAlgorithm.Array.Array;
  */
 public class ArrayStack<E> implements Stack {
     private Array<E> arr;
-    private int size;
 
     public ArrayStack(int n) {
         arr = new Array<E>(n);
-        size=0;
     }
 
     public ArrayStack() {
@@ -23,7 +21,7 @@ public class ArrayStack<E> implements Stack {
 
     @Override
     public int getSize() {
-        return size;
+        return arr.getSize();
     }
 
     @Override
@@ -33,19 +31,22 @@ public class ArrayStack<E> implements Stack {
 
     @Override
     public E pop(){
-        size--;
         return arr.removeLast();
     }
 
     @Override
     public E peek() {
-        return arr.get(size - 1);
+        return arr.get(arr.getSize()- 1);
     }
 
     @Override
     public void push(Object e) {
         arr.addLast((E) e);
-        size++;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return arr.getSize() == 0;
     }
 
     @Override
@@ -91,6 +92,8 @@ public class ArrayStack<E> implements Stack {
         System.out.println("pop...");
         System.out.println(arrayStack.pop());
         System.out.println(arrayStack);
+
+        java.util.Stack<Character> stack = new java.util.Stack<Character>();
     }
 
 }

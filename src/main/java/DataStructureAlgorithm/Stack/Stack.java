@@ -17,5 +17,7 @@ public interface Stack<E> {
 
     E pop();
 
+    boolean isEmpty();
+
 
 }
