@@ -27,10 +27,10 @@ public class SelectionSort {
     public static <T extends Comparable<T>> void sort(T[] arr) {
 
         //arr[0,i)是有序的，arr[i,n)是无序的
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length-1; i++) {
           //选择arr[i,n)中的最小元素的下标
             int minIndex=i;
-            for (int j = i; j <arr.length ; j++) {
+            for (int j = i+1; j <arr.length ; j++) {
                 if (arr[j].compareTo(arr[minIndex])<0) {
                     minIndex = j;
                 }

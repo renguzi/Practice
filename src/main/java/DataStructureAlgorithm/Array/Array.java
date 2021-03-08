@@ -52,7 +52,7 @@ public class Array<E> {
         if (size == data.length) {
 //            throw new IllegalStateException("add failed. Array is full.");
             //如果数组满了，此时不再报错了，而是对数组进行扩容，扩容为原来长度的2倍。
-            System.out.println("开始扩容为2倍的长度");
+//            System.out.println("开始扩容为2倍的长度");
             resize(2*data.length);
         }
 
