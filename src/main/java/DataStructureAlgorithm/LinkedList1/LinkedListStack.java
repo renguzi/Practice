@@ -3,6 +3,7 @@ package DataStructureAlgorithm.LinkedList1;
 import DataStructureAlgorithm.Stack.ArrayStack;
 import org.omg.PortableInterceptor.INACTIVE;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -87,7 +88,6 @@ public class LinkedListStack<E> implements Stack<E> {
         }
         long t4 = System.currentTimeMillis();
         System.out.println("ArrayStack: time: " + (t4 - t3) / 1000.0);
-
 
     }
 

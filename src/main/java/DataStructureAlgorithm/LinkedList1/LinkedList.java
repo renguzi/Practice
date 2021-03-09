@@ -2,6 +2,10 @@ package DataStructureAlgorithm.LinkedList1;
 
 import org.w3c.dom.Node;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 /**
  * @Author:asher
  * @Date:2021/3/7 18:21
@@ -162,6 +166,7 @@ public class LinkedList<E> {
         //让前一个的下一个，指向要删除的下一个，就把index位置处的元素给删除了
         prev.next = del.next;
         del.next = null;
+        size--;
         return del.e;
     }
 
@@ -173,15 +178,43 @@ public class LinkedList<E> {
         return delete(size - 1);
     }
 
+    public void removeElements(E e) {
+        Node node= dummyHead.next;
+        for (; node.next != null; node = node.next) {
+            if (node.e.equals(e)) {
+                if (node.next != null) {
+                    Node delNode = node.next;
+                    node.next = delNode.next;
+                    delNode.next = null;
+                } else {
+                    node.next = null;
+                }
+            }
+        }
+    }
+
     public void deleteElement(E e) {
         if (isEmpty() || !contains(e)) {
             return;
         }
+        ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             if (get(i).equals(e)) {
+//                list.add(i);
                 delete(i);
-                break;
+//                size++;
+//                break;
+//                continue;
             }
+        }
+        System.out.println(list);
+        Collections.reverse(list);
+
+//        for (int i = list.size()-1; i >0 ; i--) {
+//            delete(list.get(i));
+//        }
+        for (Integer k:list ) {
+//            delete(k);
         }
     }
 
@@ -228,8 +261,12 @@ public class LinkedList<E> {
 
 //        linkedList1.delete(54);
         linkedList1.deleteLast();
+        linkedList1.add(555, 4);
         System.out.println(linkedList1);
-        linkedList1.deleteElement(555);
+        linkedList1.addFirst(555);
+        System.out.println(linkedList1);
+//        linkedList1.deleteElement(555);
+        linkedList1.removeElements(555);
         System.out.println(linkedList1);
     }
 
