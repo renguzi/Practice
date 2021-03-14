@@ -20,6 +20,10 @@ public class InsertionSort {
                 }
             }
         }
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = i; j+1<arr.length  ; j++) {
+            }
+        }
     }
 
     public static <T extends Comparable<T>> void sort2(T[] arr) {
@@ -73,23 +77,43 @@ public class InsertionSort {
         arr[j] = temp;
     }
 
+
+    public static <E extends Comparable<E>> void reverseSort(E[] arr) {
+        //(0,i]未排序的，方向是从右至左
+        for (int i = arr.length - 1; i >= 0; i--) {
+            E temp = arr[i];
+            int j;
+            //[j,arr.length)已排好序的
+            for (j = i; j+1<arr.length; j++) {
+                if (arr[j+1].compareTo(temp) <= 0) {
+                    arr[j] = arr[j+1];
+                } else {
+                    break;
+                }
+            }
+            arr[j] = temp;
+        }
+    }
+
     public static void main(String[] args) {
-//        Integer[] a = { 3, 1, 5};
+        Integer[] a = { 3, 1, 5};
 ////        InsertionSort.sort(a);
 //        InsertionSort.sortPlus(a);
 ////        InsertionSort.sort3(a);
 ////        InsertionSort.sort2(a);
-//        for (Integer k:a ) {
-//            System.out.println(k);
-//
-//        }
+        InsertionSort.reverseSort(a);
+        for (Integer k:a ) {
+            System.out.println(k);
+        }
         int[] dataSize = {10000, 100000};
         System.out.println("Random array:InsertionSort VS SelectionSort:");
         for (int n:dataSize ) {
             Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
             Integer[] arr2 = Arrays.copyOf(arr, arr.length);
+            Integer[] arr3 = Arrays.copyOf(arr, arr.length);
             SortingHelper.sortTest("SelectionSort", arr);
             SortingHelper.sortTest("InsertionSortPlus",arr2);
+            SortingHelper.sortTest("InsertionSortReverse",arr3);
         }
 ////
         System.out.println("Ordered array:InsertionSort VS SelectionSort:");

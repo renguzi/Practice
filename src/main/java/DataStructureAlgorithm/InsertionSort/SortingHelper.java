@@ -33,6 +33,9 @@ public class SortingHelper {
 //            InsertionSort.sortPlus(arr);
             InsertionSort.sortPlus(arr);
         }
+        if (sortName.equals("InsertionSortReverse")) {
+            InsertionSort.reverseSort(arr);
+        }
         long endTime = System.currentTimeMillis();
         double time = (endTime - beginTime) / 1000.0;
         if (!SortingHelper.isSorted(arr)) {
